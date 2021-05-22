@@ -6,14 +6,8 @@ target 'WPG' do
   use_frameworks!
 
   # Pods for WPG
-
-  target 'WPGTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'WPGUITests' do
-    # Pods for testing
-  end
+  pod 'Alamofire', '~> 5.1.0'
+  pod 'CodableAlamofire', '~> 1.2.1'
+  pod 'AlamofireImage', '~> 4.1.0'
 
 end

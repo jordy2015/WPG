@@ -8,6 +8,8 @@
 import UIKit
 
 class GalleryViewController: UIViewController {
+    
+    let presenter = GalleryPresenter(repository: DI.factory.getGalleryRepository())
 
     let galleryColletionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -29,6 +31,12 @@ class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        presenter.attachView(self)
+        presenter.getPhotos(page: 1)
+    }
+    
+    deinit {
+        presenter.detachView()
     }
     
     func setupUI() {
@@ -77,3 +85,18 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension GalleryViewController: GalleryProtocol {
+    func shouldDisplayActivityIndicator(_ shouldDisplay: Bool) {
+        print(shouldDisplay)
+    }
+    
+    func gotError(_ error: Error) {
+        print("-> got ErrorXXXX")
+        print(error)
+    }
+    
+    func gotPhotos(photosList: [PhotoProtocol]) {
+        print("-> got data!!!")
+        print(photosList)
+    }
+}
