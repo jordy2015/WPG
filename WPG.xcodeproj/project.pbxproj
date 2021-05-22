@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		CD958D0C265964EF00CF5D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0B265964EF00CF5D33 /* AppDelegate.swift */; };
 		CD958D0E265964EF00CF5D33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */; };
-		CD958D10265964EF00CF5D33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0F265964EF00CF5D33 /* ViewController.swift */; };
 		CD958D13265964EF00CF5D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D11265964EF00CF5D33 /* Main.storyboard */; };
 		CD958D16265964EF00CF5D33 /* WPG.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD958D14265964EF00CF5D33 /* WPG.xcdatamodeld */; };
 		CD958D18265964F100CF5D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD958D17265964F100CF5D33 /* Assets.xcassets */; };
 		CD958D1B265964F100CF5D33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D19265964F100CF5D33 /* LaunchScreen.storyboard */; };
 		CD958D26265964F200CF5D33 /* WPGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D25265964F200CF5D33 /* WPGTests.swift */; };
 		CD958D31265964F200CF5D33 /* WPGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D30265964F200CF5D33 /* WPGUITests.swift */; };
+		CD958D4226596DEC00CF5D33 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D4126596DEC00CF5D33 /* Gallery.storyboard */; };
+		CD958D51265977C600CF5D33 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D50265977C600CF5D33 /* Favorites.storyboard */; };
+		CD958D5E26597C7A00CF5D33 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D5D26597C7A00CF5D33 /* GalleryViewController.swift */; };
+		CD958D6626597C8E00CF5D33 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D6526597C8E00CF5D33 /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		CD958D08265964EF00CF5D33 /* WPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD958D0B265964EF00CF5D33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD958D0F265964EF00CF5D33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD958D12265964EF00CF5D33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD958D15265964EF00CF5D33 /* WPG.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WPG.xcdatamodel; sourceTree = "<group>"; };
 		CD958D17265964F100CF5D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		CD958D2C265964F200CF5D33 /* WPGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WPGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD958D30265964F200CF5D33 /* WPGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPGUITests.swift; sourceTree = "<group>"; };
 		CD958D32265964F200CF5D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD958D4126596DEC00CF5D33 /* Gallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
+		CD958D50265977C600CF5D33 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		CD958D5D26597C7A00CF5D33 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		CD958D6526597C8E00CF5D33 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +107,10 @@
 		CD958D0A265964EF00CF5D33 /* WPG */ = {
 			isa = PBXGroup;
 			children = (
+				CD958D77265983B400CF5D33 /* Features */,
 				CD958D0B265964EF00CF5D33 /* AppDelegate.swift */,
 				CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */,
-				CD958D0F265964EF00CF5D33 /* ViewController.swift */,
-				CD958D11265964EF00CF5D33 /* Main.storyboard */,
 				CD958D17265964F100CF5D33 /* Assets.xcassets */,
-				CD958D19265964F100CF5D33 /* LaunchScreen.storyboard */,
 				CD958D1C265964F100CF5D33 /* Info.plist */,
 				CD958D14265964EF00CF5D33 /* WPG.xcdatamodeld */,
 			);
@@ -129,6 +133,59 @@
 				CD958D32265964F200CF5D33 /* Info.plist */,
 			);
 			path = WPGUITests;
+			sourceTree = "<group>";
+		};
+		CD958D5526597AFB00CF5D33 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CD958D5C26597C3600CF5D33 /* Presenters */,
+				CD958D5B26597C2B00CF5D33 /* Favorites */,
+				CD958D5A26597C1700CF5D33 /* Gallery */,
+				CD958D5626597B0400CF5D33 /* Storyboards */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CD958D5626597B0400CF5D33 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CD958D50265977C600CF5D33 /* Favorites.storyboard */,
+				CD958D4126596DEC00CF5D33 /* Gallery.storyboard */,
+				CD958D19265964F100CF5D33 /* LaunchScreen.storyboard */,
+				CD958D11265964EF00CF5D33 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CD958D5A26597C1700CF5D33 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				CD958D5D26597C7A00CF5D33 /* GalleryViewController.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		CD958D5B26597C2B00CF5D33 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				CD958D6526597C8E00CF5D33 /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		CD958D5C26597C3600CF5D33 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		CD958D77265983B400CF5D33 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				CD958D5526597AFB00CF5D33 /* Presentation */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,8 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD958D1B265964F100CF5D33 /* LaunchScreen.storyboard in Resources */,
+				CD958D4226596DEC00CF5D33 /* Gallery.storyboard in Resources */,
 				CD958D18265964F100CF5D33 /* Assets.xcassets in Resources */,
 				CD958D13265964EF00CF5D33 /* Main.storyboard in Resources */,
+				CD958D51265977C600CF5D33 /* Favorites.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD958D10265964EF00CF5D33 /* ViewController.swift in Sources */,
 				CD958D0C265964EF00CF5D33 /* AppDelegate.swift in Sources */,
+				CD958D5E26597C7A00CF5D33 /* GalleryViewController.swift in Sources */,
 				CD958D16265964EF00CF5D33 /* WPG.xcdatamodeld in Sources */,
+				CD958D6626597C8E00CF5D33 /* FavoritesViewController.swift in Sources */,
 				CD958D0E265964EF00CF5D33 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
