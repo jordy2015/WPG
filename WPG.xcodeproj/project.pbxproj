@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3868A0EC98B85AB00EA9680 /* Pods_WPGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CD86FF60A18C74F66B9E5C /* Pods_WPGTests.framework */; };
 		CD958D0C265964EF00CF5D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0B265964EF00CF5D33 /* AppDelegate.swift */; };
 		CD958D0E265964EF00CF5D33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */; };
 		CD958D13265964EF00CF5D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D11265964EF00CF5D33 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 		CD958D51265977C600CF5D33 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D50265977C600CF5D33 /* Favorites.storyboard */; };
 		CD958D5E26597C7A00CF5D33 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D5D26597C7A00CF5D33 /* GalleryViewController.swift */; };
 		CD958D6626597C8E00CF5D33 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D6526597C8E00CF5D33 /* FavoritesViewController.swift */; };
+		D7151758B88252452509C383 /* Pods_WPG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC06C5EFA4C5D029D8596BA /* Pods_WPG.framework */; };
+		FE32EB390E01CE4CA1C4BB34 /* Pods_WPG_WPGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9B9E55FADB6A894AB5E95C /* Pods_WPG_WPGUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17628E36F2C4D210B8D3F512 /* Pods-WPG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPG.debug.xcconfig"; path = "Target Support Files/Pods-WPG/Pods-WPG.debug.xcconfig"; sourceTree = "<group>"; };
+		5AC06C5EFA4C5D029D8596BA /* Pods_WPG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79CD86FF60A18C74F66B9E5C /* Pods_WPGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86A78F2996B631308401F500 /* Pods-WPG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPG.release.xcconfig"; path = "Target Support Files/Pods-WPG/Pods-WPG.release.xcconfig"; sourceTree = "<group>"; };
+		980AB06A4E954A53D8ADBA4A /* Pods-WPGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPGTests.release.xcconfig"; path = "Target Support Files/Pods-WPGTests/Pods-WPGTests.release.xcconfig"; sourceTree = "<group>"; };
+		9A52B29AC997F41FBEC9AFEE /* Pods-WPG-WPGUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPG-WPGUITests.debug.xcconfig"; path = "Target Support Files/Pods-WPG-WPGUITests/Pods-WPG-WPGUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF9B9E55FADB6A894AB5E95C /* Pods_WPG_WPGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPG_WPGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD958D08265964EF00CF5D33 /* WPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD958D0B265964EF00CF5D33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +67,8 @@
 		CD958D50265977C600CF5D33 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		CD958D5D26597C7A00CF5D33 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		CD958D6526597C8E00CF5D33 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		DBEA212CDC1410B665D74C31 /* Pods-WPG-WPGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPG-WPGUITests.release.xcconfig"; path = "Target Support Files/Pods-WPG-WPGUITests/Pods-WPG-WPGUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DFE30036D431B70A0A0525AD /* Pods-WPGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPGTests.debug.xcconfig"; path = "Target Support Files/Pods-WPGTests/Pods-WPGTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7151758B88252452509C383 /* Pods_WPG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3868A0EC98B85AB00EA9680 /* Pods_WPGTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE32EB390E01CE4CA1C4BB34 /* Pods_WPG_WPGUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DA4D75324FD38AEE74E92DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AC06C5EFA4C5D029D8596BA /* Pods_WPG.framework */,
+				BF9B9E55FADB6A894AB5E95C /* Pods_WPG_WPGUITests.framework */,
+				79CD86FF60A18C74F66B9E5C /* Pods_WPGTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5501AEF8A08382B268B331C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17628E36F2C4D210B8D3F512 /* Pods-WPG.debug.xcconfig */,
+				86A78F2996B631308401F500 /* Pods-WPG.release.xcconfig */,
+				9A52B29AC997F41FBEC9AFEE /* Pods-WPG-WPGUITests.debug.xcconfig */,
+				DBEA212CDC1410B665D74C31 /* Pods-WPG-WPGUITests.release.xcconfig */,
+				DFE30036D431B70A0A0525AD /* Pods-WPGTests.debug.xcconfig */,
+				980AB06A4E954A53D8ADBA4A /* Pods-WPGTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CD958CFF265964EF00CF5D33 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +129,8 @@
 				CD958D24265964F200CF5D33 /* WPGTests */,
 				CD958D2F265964F200CF5D33 /* WPGUITests */,
 				CD958D09265964EF00CF5D33 /* Products */,
+				5501AEF8A08382B268B331C4 /* Pods */,
+				0DA4D75324FD38AEE74E92DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD958D35265964F200CF5D33 /* Build configuration list for PBXNativeTarget "WPG" */;
 			buildPhases = (
+				0418195819D1FECF354AAF9C /* [CP] Check Pods Manifest.lock */,
 				CD958D04265964EF00CF5D33 /* Sources */,
 				CD958D05265964EF00CF5D33 /* Frameworks */,
 				CD958D06265964EF00CF5D33 /* Resources */,
@@ -212,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD958D38265964F200CF5D33 /* Build configuration list for PBXNativeTarget "WPGTests" */;
 			buildPhases = (
+				C86BD4995F04B6A0B6529BF6 /* [CP] Check Pods Manifest.lock */,
 				CD958D1D265964F200CF5D33 /* Sources */,
 				CD958D1E265964F200CF5D33 /* Frameworks */,
 				CD958D1F265964F200CF5D33 /* Resources */,
@@ -230,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD958D3B265964F200CF5D33 /* Build configuration list for PBXNativeTarget "WPGUITests" */;
 			buildPhases = (
+				9246740C511D2822C13E47EB /* [CP] Check Pods Manifest.lock */,
 				CD958D28265964F200CF5D33 /* Sources */,
 				CD958D29265964F200CF5D33 /* Frameworks */,
 				CD958D2A265964F200CF5D33 /* Resources */,
@@ -314,6 +357,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0418195819D1FECF354AAF9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WPG-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9246740C511D2822C13E47EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WPG-WPGUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C86BD4995F04B6A0B6529BF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WPGTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD958D04265964EF00CF5D33 /* Sources */ = {
@@ -497,12 +609,14 @@
 		};
 		CD958D36265964F200CF5D33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17628E36F2C4D210B8D3F512 /* Pods-WPG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 792299Z83V;
 				INFOPLIST_FILE = WPG/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,18 +624,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.WPG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CD958D37265964F200CF5D33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86A78F2996B631308401F500 /* Pods-WPG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 792299Z83V;
 				INFOPLIST_FILE = WPG/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,12 +645,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.WPG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		CD958D39265964F200CF5D33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE30036D431B70A0A0525AD /* Pods-WPGTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +674,7 @@
 		};
 		CD958D3A265964F200CF5D33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 980AB06A4E954A53D8ADBA4A /* Pods-WPGTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +697,7 @@
 		};
 		CD958D3C265964F200CF5D33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A52B29AC997F41FBEC9AFEE /* Pods-WPG-WPGUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -599,6 +718,7 @@
 		};
 		CD958D3D265964F200CF5D33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBEA212CDC1410B665D74C31 /* Pods-WPG-WPGUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
