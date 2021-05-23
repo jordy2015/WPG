@@ -31,7 +31,10 @@ class GalleryViewController: UIViewController {
     }()
     
     private let gallerySearchController: UISearchController = {
-        let searchController = UISearchController()
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let searchController = UISearchController(searchResultsController: SearchViewController(collectionViewLayout: layout))
+        
         searchController.searchBar.autocapitalizationType = .none
         searchController.obscuresBackgroundDuringPresentation = false
         return searchController
@@ -59,6 +62,7 @@ class GalleryViewController: UIViewController {
         
         self.galleryColletionView.delegate = self
         self.galleryColletionView.dataSource = self
+        self.gallerySearchController.searchResultsUpdater = self
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -111,6 +115,21 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
         let porcentage: Float = Float(photo.getHeight())/Float(photo.getWidth())/2
         let height = porcentage > Float(0.8) ? collectionView.bounds.height * 0.8 : collectionView.bounds.height * CGFloat(porcentage)
         return CGSize(width: collectionView.bounds.width, height: height)
+    }
+}
+
+extension GalleryViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchResults = self.photoList
+        
+        // Strip out all the leading and trailing spaces.
+        let strippedString = searchController.searchBar.text!.trimmingCharacters(in: CharacterSet.whitespaces)
+        
+        let filteredResults = searchResults.filter { $0.getUser().getUserName().contains(strippedString) || $0.getUser().getName().contains(strippedString)}
+        
+        if let searchViewController = searchController.searchResultsController as? SearchViewController {
+            searchViewController.photoList = filteredResults
+        }
     }
 }
 

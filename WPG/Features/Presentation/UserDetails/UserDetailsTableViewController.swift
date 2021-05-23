@@ -21,7 +21,7 @@ class UserDetailsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -37,15 +37,19 @@ class UserDetailsTableViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             cell.textLabel?.text = user?.getUserName()
-            cell.detailTextLabel?.text = "Name"
+            cell.detailTextLabel?.text = "User name"
             if let url = URL(string: user?.getProfileImageUrl() ?? "") {
                 cell.imageView?.af.setImage(withURL: url, cacheKey: user?.getId(), placeholderImage: UIImage(named: "placeholder"))
             }
         case 1:
+            cell.textLabel?.text = user?.getName()
+            cell.detailTextLabel?.text = "Name"
+            cell.imageView?.image = nil
+        case 2:
             cell.textLabel?.text = user?.getPortfolioUrl()
             cell.detailTextLabel?.text = "Portfolio Url"
             cell.imageView?.image = nil
-        case 2:
+        case 3:
             cell.textLabel?.text = "\(user?.getTotalPhotos() ?? 0)"
             cell.detailTextLabel?.text = "Total Photos"
             cell.imageView?.image = nil

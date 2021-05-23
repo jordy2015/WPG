@@ -26,6 +26,10 @@ struct UserModel: Decodable {
 }
 
 extension UserModel: UserProtocol {
+    func getName() -> String {
+        return self.name
+    }
+    
     func getId() -> String {
         return self.id
     }

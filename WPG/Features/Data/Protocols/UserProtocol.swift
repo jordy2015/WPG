@@ -10,6 +10,7 @@ import Foundation
 protocol UserProtocol {
     func getId() -> String
     func getUserName() -> String
+    func getName() -> String
     func getProfileImageUrl() -> String
     func getPortfolioUrl() -> String
     func getTotalPhotos() -> Int
