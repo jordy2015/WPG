@@ -39,7 +39,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Gallery" id="zCQ-t0-K8C"/>
                     <connections>
-                        <segue destination="Rci-pj-Gow" kind="show" identifier="PhotoViewerSegue" id="hCU-32-M9h"/>
+                        <segue destination="Rci-pj-Gow" kind="presentation" identifier="PhotoViewerSegue" modalPresentationStyle="automatic" modalTransitionStyle="flipHorizontal" id="hCU-32-M9h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhW-PX-GNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

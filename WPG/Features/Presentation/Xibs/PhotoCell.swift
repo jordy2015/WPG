@@ -56,5 +56,7 @@ class PhotoCell: UICollectionViewCell {
             }
         }
     }
+    
+    
 
 }
