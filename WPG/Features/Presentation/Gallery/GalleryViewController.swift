@@ -9,7 +9,7 @@ import UIKit
 
 class GalleryViewController: UIViewController {
     
-    private let presenter = GalleryPresenter(repository: DI.factory.getGalleryRepository())
+    private let presenter = GalleryPresenter(useCase: DI.factory.getPhotosUseCase())
     
     fileprivate var photoList: [PhotoProtocol] = [] {
         didSet {
@@ -19,6 +19,7 @@ class GalleryViewController: UIViewController {
     
     fileprivate var indexSelected: Int?
     fileprivate var page: Int = 1
+    fileprivate var shouldStopPagination: Bool = false
 
     private let galleryColletionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -99,7 +100,7 @@ extension GalleryViewController: UICollectionViewDataSource {
         let height = scrollView.frame.size.height
         let contentYoffset = scrollView.contentOffset.y
         let distanceFromBottom = scrollView.contentSize.height - contentYoffset
-        if distanceFromBottom < height {
+        if distanceFromBottom < height && !shouldStopPagination {
             presenter.getPhotos(page: self.page)
         }
     }
@@ -134,6 +135,10 @@ extension GalleryViewController: UISearchResultsUpdating {
 }
 
 extension GalleryViewController: GalleryProtocol {
+    func isLocal(_ flag: Bool) {
+        self.shouldStopPagination = flag
+    }
+    
     func shouldDisplayActivityIndicator(_ shouldDisplay: Bool) {
         print(shouldDisplay)
     }

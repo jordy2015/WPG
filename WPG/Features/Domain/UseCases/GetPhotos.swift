@@ -10,11 +10,11 @@ import Foundation
 class GetPhotos {
     let gelleryRepository: GalleryRepository
     
-    init(gallery: GalleryRepository) {
-        self.gelleryRepository = gallery
+    init(repository: GalleryRepository) {
+        self.gelleryRepository = repository
     }
     
-    func call(inPage: Int, completitionHandler: @escaping ([PhotoProtocol]?, Error?) -> Void) {
+    func call(inPage: Int, completitionHandler: @escaping ([PhotoProtocol]?, Error?, Bool) -> Void) {
         gelleryRepository.getPhotos(inPage: inPage, completitionHandler: completitionHandler)
     }
 }

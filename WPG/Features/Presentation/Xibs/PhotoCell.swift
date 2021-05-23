@@ -29,12 +29,9 @@ class PhotoCell: UICollectionViewCell {
         likesLabel.text = "\(photo.getLikes())"
         userNameLabel.text = user.getUserName()
         
-        if photo.isFavorite() {
-            if let photoDataImage = photo.getImage() {
-                photoImage.image = UIImage(data: photoDataImage)
-            } else {
-                photoImage.image = UIImage(named: "placeholder")
-            }
+        if let photoDataImage = photo.getImage() {
+            
+            photoImage.image = UIImage(data: photoDataImage)
             
             if let profileDataImage = user.getProfileImage() {
                 profileImage.image = UIImage(data: profileDataImage)

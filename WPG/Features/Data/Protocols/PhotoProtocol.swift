@@ -16,4 +16,5 @@ protocol PhotoProtocol {
     func getImage() -> Data?
     func getUser() -> UserProtocol
     func isFavorite() -> Bool
+    func save(in database: DatabaseHandler) 
 }

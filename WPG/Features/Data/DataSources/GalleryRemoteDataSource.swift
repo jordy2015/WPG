@@ -11,7 +11,6 @@ protocol GalleryRemoteDataSource {
     func getPhotos(inPage: Int, completitionHandler: @escaping(_ response: [PhotoModel]?, _ error: Error?) -> Void)
 }
 
-
 class GalleryRemoteDataSourceImpl: GalleryRemoteDataSource {
     
     let httpClient: ApiClient

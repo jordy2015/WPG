@@ -29,4 +29,9 @@ class PhotoViewerViewController: UIViewController {
             (segue.destination as? UserDetailsTableViewController)?.user = user
         }
     }
+    
+    @IBAction func addToFavorites(_ sender: Any) {
+        photo?.save(in: DI.factory.getDatabaseHandler())
+    }
+    
 }

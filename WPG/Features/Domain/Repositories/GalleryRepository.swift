@@ -8,5 +8,5 @@
 import Foundation
 
 protocol GalleryRepository {
-    func getPhotos(inPage: Int, completitionHandler: @escaping(_ response: [PhotoProtocol]?, _ error: Error?) -> Void)
+    func getPhotos(inPage: Int, completitionHandler: @escaping(_ response: [PhotoProtocol]?, _ error: Error?, _ isLocal: Bool) -> Void)
 }
