@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZSn-og-Lbu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,10 +38,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Gallery" id="zCQ-t0-K8C"/>
+                    <connections>
+                        <segue destination="Rci-pj-Gow" kind="show" identifier="PhotoViewerSegue" id="hCU-32-M9h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhW-PX-GNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="687" y="-230"/>
+        </scene>
+        <!--PhotoViewer-->
+        <scene sceneID="br0-5c-HTC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotoViewer" id="Rci-pj-Gow" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BOV-ga-xLh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1V-CJ-8TL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327" y="-230"/>
         </scene>
     </scenes>
     <resources>

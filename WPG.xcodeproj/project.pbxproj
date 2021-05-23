@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD16A493265A195A00870589 /* PhotoViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD16A492265A195A00870589 /* PhotoViewer.storyboard */; };
+		CD16A499265A1BB700870589 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16A498265A1BB700870589 /* PhotoViewerViewController.swift */; };
 		CD958D0C265964EF00CF5D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0B265964EF00CF5D33 /* AppDelegate.swift */; };
 		CD958D0E265964EF00CF5D33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */; };
 		CD958D13265964EF00CF5D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D11265964EF00CF5D33 /* Main.storyboard */; };
@@ -19,6 +21,26 @@
 		CD958D51265977C600CF5D33 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D50265977C600CF5D33 /* Favorites.storyboard */; };
 		CD958D5E26597C7A00CF5D33 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D5D26597C7A00CF5D33 /* GalleryViewController.swift */; };
 		CD958D6626597C8E00CF5D33 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D6526597C8E00CF5D33 /* FavoritesViewController.swift */; };
+		CD958DA326598C9F00CF5D33 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DA226598C9F00CF5D33 /* Endpoints.swift */; };
+		CD958DAA26598D4C00CF5D33 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DA926598D4C00CF5D33 /* Credentials.swift */; };
+		CD958DB026598DE800CF5D33 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DAF26598DE800CF5D33 /* ApiClient.swift */; };
+		CD958DD1265993E100CF5D33 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DD0265993E100CF5D33 /* PhotoModel.swift */; };
+		CD958DD62659949000CF5D33 /* UrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DD52659949000CF5D33 /* UrlModel.swift */; };
+		CD958DDE2659954A00CF5D33 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DDD2659954A00CF5D33 /* UserModel.swift */; };
+		CD958DE3265995AF00CF5D33 /* ProfileImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DE2265995AF00CF5D33 /* ProfileImageModel.swift */; };
+		CD958DE82659989400CF5D33 /* GalleryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DE72659989300CF5D33 /* GalleryRemoteDataSource.swift */; };
+		CD958DEE265999C700CF5D33 /* PhotoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DED265999C700CF5D33 /* PhotoProtocol.swift */; };
+		CD958DF626599D0300CF5D33 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DF526599D0300CF5D33 /* GalleryRepository.swift */; };
+		CD958DFB26599E1000CF5D33 /* GalleryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958DFA26599E1000CF5D33 /* GalleryRepositoryImpl.swift */; };
+		CD958E072659A2E100CF5D33 /* GetPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958E062659A2E100CF5D33 /* GetPhotos.swift */; };
+		CD958E0C2659A49400CF5D33 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958E0B2659A49400CF5D33 /* GalleryPresenter.swift */; };
+		CD958E112659A55600CF5D33 /* GalleryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958E102659A55600CF5D33 /* GalleryProtocol.swift */; };
+		CD958E172659A6FA00CF5D33 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958E162659A6FA00CF5D33 /* DI.swift */; };
+		CD958E262659BA6C00CF5D33 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958E252659BA6C00CF5D33 /* UserProtocol.swift */; };
+		CD958E2D2659C11F00CF5D33 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958E2B2659C11F00CF5D33 /* PhotoCell.swift */; };
+		CD958E2E2659C11F00CF5D33 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD958E2C2659C11F00CF5D33 /* PhotoCell.xib */; };
+		CD958E372659D37400CF5D33 /* ImagesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958E362659D37400CF5D33 /* ImagesCache.swift */; };
+		D7151758B88252452509C383 /* Pods_WPG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC06C5EFA4C5D029D8596BA /* Pods_WPG.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +61,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17628E36F2C4D210B8D3F512 /* Pods-WPG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPG.debug.xcconfig"; path = "Target Support Files/Pods-WPG/Pods-WPG.debug.xcconfig"; sourceTree = "<group>"; };
+		5AC06C5EFA4C5D029D8596BA /* Pods_WPG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WPG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86A78F2996B631308401F500 /* Pods-WPG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPG.release.xcconfig"; path = "Target Support Files/Pods-WPG/Pods-WPG.release.xcconfig"; sourceTree = "<group>"; };
+		CD16A492265A195A00870589 /* PhotoViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoViewer.storyboard; sourceTree = "<group>"; };
+		CD16A498265A1BB700870589 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		CD958D08265964EF00CF5D33 /* WPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD958D0B265964EF00CF5D33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +84,25 @@
 		CD958D50265977C600CF5D33 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		CD958D5D26597C7A00CF5D33 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		CD958D6526597C8E00CF5D33 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		CD958DA226598C9F00CF5D33 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		CD958DA926598D4C00CF5D33 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		CD958DAF26598DE800CF5D33 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		CD958DD0265993E100CF5D33 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		CD958DD52659949000CF5D33 /* UrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlModel.swift; sourceTree = "<group>"; };
+		CD958DDD2659954A00CF5D33 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CD958DE2265995AF00CF5D33 /* ProfileImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageModel.swift; sourceTree = "<group>"; };
+		CD958DE72659989300CF5D33 /* GalleryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRemoteDataSource.swift; sourceTree = "<group>"; };
+		CD958DED265999C700CF5D33 /* PhotoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProtocol.swift; sourceTree = "<group>"; };
+		CD958DF526599D0300CF5D33 /* GalleryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepository.swift; sourceTree = "<group>"; };
+		CD958DFA26599E1000CF5D33 /* GalleryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepositoryImpl.swift; sourceTree = "<group>"; };
+		CD958E062659A2E100CF5D33 /* GetPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotos.swift; sourceTree = "<group>"; };
+		CD958E0B2659A49400CF5D33 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
+		CD958E102659A55600CF5D33 /* GalleryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryProtocol.swift; sourceTree = "<group>"; };
+		CD958E162659A6FA00CF5D33 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
+		CD958E252659BA6C00CF5D33 /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
+		CD958E2B2659C11F00CF5D33 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		CD958E2C2659C11F00CF5D33 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		CD958E362659D37400CF5D33 /* ImagesCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7151758B88252452509C383 /* Pods_WPG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +131,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DA4D75324FD38AEE74E92DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AC06C5EFA4C5D029D8596BA /* Pods_WPG.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5501AEF8A08382B268B331C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17628E36F2C4D210B8D3F512 /* Pods-WPG.debug.xcconfig */,
+				86A78F2996B631308401F500 /* Pods-WPG.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CD16A497265A1B7500870589 /* PhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				CD16A498265A1BB700870589 /* PhotoViewerViewController.swift */,
+			);
+			path = PhotoViewer;
+			sourceTree = "<group>";
+		};
 		CD958CFF265964EF00CF5D33 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +163,8 @@
 				CD958D24265964F200CF5D33 /* WPGTests */,
 				CD958D2F265964F200CF5D33 /* WPGUITests */,
 				CD958D09265964EF00CF5D33 /* Products */,
+				5501AEF8A08382B268B331C4 /* Pods */,
+				0DA4D75324FD38AEE74E92DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +181,8 @@
 		CD958D0A265964EF00CF5D33 /* WPG */ = {
 			isa = PBXGroup;
 			children = (
+				CD958E152659A6CD00CF5D33 /* DI */,
+				CD958DA726598D0300CF5D33 /* Core */,
 				CD958D77265983B400CF5D33 /* Features */,
 				CD958D0B265964EF00CF5D33 /* AppDelegate.swift */,
 				CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */,
@@ -138,6 +214,8 @@
 		CD958D5526597AFB00CF5D33 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CD16A497265A1B7500870589 /* PhotoViewer */,
+				CD958E2A2659C0F100CF5D33 /* Xibs */,
 				CD958D5C26597C3600CF5D33 /* Presenters */,
 				CD958D5B26597C2B00CF5D33 /* Favorites */,
 				CD958D5A26597C1700CF5D33 /* Gallery */,
@@ -153,6 +231,7 @@
 				CD958D4126596DEC00CF5D33 /* Gallery.storyboard */,
 				CD958D19265964F100CF5D33 /* LaunchScreen.storyboard */,
 				CD958D11265964EF00CF5D33 /* Main.storyboard */,
+				CD16A492265A195A00870589 /* PhotoViewer.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -176,6 +255,8 @@
 		CD958D5C26597C3600CF5D33 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				CD958E0B2659A49400CF5D33 /* GalleryPresenter.swift */,
+				CD958E102659A55600CF5D33 /* GalleryProtocol.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -183,9 +264,143 @@
 		CD958D77265983B400CF5D33 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CD958D9A26598A5600CF5D33 /* Domain */,
+				CD958D9926598A4A00CF5D33 /* Data */,
 				CD958D5526597AFB00CF5D33 /* Presentation */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		CD958D9926598A4A00CF5D33 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CD958DEC2659994D00CF5D33 /* Protocols */,
+				CD958DA026598BAB00CF5D33 /* Repositories */,
+				CD958D9F26598B9E00CF5D33 /* Models */,
+				CD958D9E26598B8600CF5D33 /* DataSources */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CD958D9A26598A5600CF5D33 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CD958D9D26598A9A00CF5D33 /* UseCases */,
+				CD958D9C26598A9000CF5D33 /* Repositories */,
+				CD958D9B26598A8500CF5D33 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CD958D9B26598A8500CF5D33 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CD958D9C26598A9000CF5D33 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CD958DF526599D0300CF5D33 /* GalleryRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CD958D9D26598A9A00CF5D33 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				CD958E062659A2E100CF5D33 /* GetPhotos.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		CD958D9E26598B8600CF5D33 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				CD958DE72659989300CF5D33 /* GalleryRemoteDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		CD958D9F26598B9E00CF5D33 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD958DD0265993E100CF5D33 /* PhotoModel.swift */,
+				CD958DD52659949000CF5D33 /* UrlModel.swift */,
+				CD958DDD2659954A00CF5D33 /* UserModel.swift */,
+				CD958DE2265995AF00CF5D33 /* ProfileImageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD958DA026598BAB00CF5D33 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CD958DFA26599E1000CF5D33 /* GalleryRepositoryImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CD958DA726598D0300CF5D33 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CD958E352659D34C00CF5D33 /* Cache */,
+				CD958DAE26598DD200CF5D33 /* Http */,
+				CD958DA826598D1800CF5D33 /* Constants */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CD958DA826598D1800CF5D33 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CD958DA226598C9F00CF5D33 /* Endpoints.swift */,
+				CD958DA926598D4C00CF5D33 /* Credentials.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CD958DAE26598DD200CF5D33 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				CD958DAF26598DE800CF5D33 /* ApiClient.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		CD958DEC2659994D00CF5D33 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CD958DED265999C700CF5D33 /* PhotoProtocol.swift */,
+				CD958E252659BA6C00CF5D33 /* UserProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CD958E152659A6CD00CF5D33 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				CD958E162659A6FA00CF5D33 /* DI.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		CD958E2A2659C0F100CF5D33 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				CD958E2B2659C11F00CF5D33 /* PhotoCell.swift */,
+				CD958E2C2659C11F00CF5D33 /* PhotoCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		CD958E352659D34C00CF5D33 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				CD958E362659D37400CF5D33 /* ImagesCache.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +410,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD958D35265964F200CF5D33 /* Build configuration list for PBXNativeTarget "WPG" */;
 			buildPhases = (
+				0418195819D1FECF354AAF9C /* [CP] Check Pods Manifest.lock */,
 				CD958D04265964EF00CF5D33 /* Sources */,
 				CD958D05265964EF00CF5D33 /* Frameworks */,
 				CD958D06265964EF00CF5D33 /* Resources */,
+				55E03EF5397452B5EEB72A2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,6 +508,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD16A493265A195A00870589 /* PhotoViewer.storyboard in Resources */,
+				CD958E2E2659C11F00CF5D33 /* PhotoCell.xib in Resources */,
 				CD958D1B265964F100CF5D33 /* LaunchScreen.storyboard in Resources */,
 				CD958D4226596DEC00CF5D33 /* Gallery.storyboard in Resources */,
 				CD958D18265964F100CF5D33 /* Assets.xcassets in Resources */,
@@ -315,6 +534,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0418195819D1FECF354AAF9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WPG-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55E03EF5397452B5EEB72A2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WPG/Pods-WPG-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WPG/Pods-WPG-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WPG/Pods-WPG-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD958D04265964EF00CF5D33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -323,8 +584,27 @@
 				CD958D0C265964EF00CF5D33 /* AppDelegate.swift in Sources */,
 				CD958D5E26597C7A00CF5D33 /* GalleryViewController.swift in Sources */,
 				CD958D16265964EF00CF5D33 /* WPG.xcdatamodeld in Sources */,
+				CD958DB026598DE800CF5D33 /* ApiClient.swift in Sources */,
+				CD958DD1265993E100CF5D33 /* PhotoModel.swift in Sources */,
+				CD16A499265A1BB700870589 /* PhotoViewerViewController.swift in Sources */,
+				CD958E172659A6FA00CF5D33 /* DI.swift in Sources */,
+				CD958DD62659949000CF5D33 /* UrlModel.swift in Sources */,
+				CD958DEE265999C700CF5D33 /* PhotoProtocol.swift in Sources */,
+				CD958E0C2659A49400CF5D33 /* GalleryPresenter.swift in Sources */,
+				CD958DAA26598D4C00CF5D33 /* Credentials.swift in Sources */,
+				CD958DFB26599E1000CF5D33 /* GalleryRepositoryImpl.swift in Sources */,
+				CD958E112659A55600CF5D33 /* GalleryProtocol.swift in Sources */,
+				CD958E072659A2E100CF5D33 /* GetPhotos.swift in Sources */,
 				CD958D6626597C8E00CF5D33 /* FavoritesViewController.swift in Sources */,
+				CD958E372659D37400CF5D33 /* ImagesCache.swift in Sources */,
+				CD958DE82659989400CF5D33 /* GalleryRemoteDataSource.swift in Sources */,
+				CD958DA326598C9F00CF5D33 /* Endpoints.swift in Sources */,
 				CD958D0E265964EF00CF5D33 /* SceneDelegate.swift in Sources */,
+				CD958DDE2659954A00CF5D33 /* UserModel.swift in Sources */,
+				CD958DF626599D0300CF5D33 /* GalleryRepository.swift in Sources */,
+				CD958DE3265995AF00CF5D33 /* ProfileImageModel.swift in Sources */,
+				CD958E2D2659C11F00CF5D33 /* PhotoCell.swift in Sources */,
+				CD958E262659BA6C00CF5D33 /* UserProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,12 +777,14 @@
 		};
 		CD958D36265964F200CF5D33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17628E36F2C4D210B8D3F512 /* Pods-WPG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 792299Z83V;
 				INFOPLIST_FILE = WPG/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,18 +792,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.WPG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CD958D37265964F200CF5D33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86A78F2996B631308401F500 /* Pods-WPG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 792299Z83V;
 				INFOPLIST_FILE = WPG/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,7 +813,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.WPG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
