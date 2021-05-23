@@ -10,6 +10,7 @@ import CoreData
 
 public class User: NSManagedObject {
     @NSManaged public var id: String?
+    @NSManaged public var name: String?
     @NSManaged public var portfolioUrl: String?
     @NSManaged public var profileImage: Data?
     @NSManaged public var profileImageUrl: String?
@@ -28,7 +29,7 @@ extension User: UserProtocol {
     }
     
     func getName() -> String {
-        return ""
+        return self.name ?? ""
     }
     
     func getProfileImageUrl() -> String {

@@ -103,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="container" destination="mNr-e1-ydz" id="qsy-lV-8hj"/>
+                        <outlet property="favoriteBtn" destination="KRh-hg-tyb" id="DuS-oh-Um7"/>
                         <outlet property="viewer" destination="d80-In-EAJ" id="Reb-aY-qxX"/>
                     </connections>
                 </viewController>

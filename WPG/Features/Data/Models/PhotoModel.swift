@@ -82,7 +82,7 @@ extension PhotoModel: PhotoProtocol {
         return self.user
     }
     
-    func isFavorite() -> Bool {
-        return false
+    func isFavorite(search database: DatabaseHandler) -> Bool {
+        return database.searchPhoto(with: self.getId()) != nil ? true : false
     }
 }

@@ -48,7 +48,7 @@ extension Photo: PhotoProtocol {
         return self.user! as UserProtocol
     }
     
-    func isFavorite() -> Bool {
+    func isFavorite(search database: DatabaseHandler) -> Bool {
         return true
     }
     

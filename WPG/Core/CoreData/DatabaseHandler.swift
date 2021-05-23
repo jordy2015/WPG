@@ -9,7 +9,7 @@ import CoreData
 import UIKit
 
 class DatabaseHandler {
-    private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    fileprivate let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func add<T: NSManagedObject>(_ type: T.Type) -> T? {
         guard let entityName = T.entity().name else {
@@ -40,6 +40,28 @@ class DatabaseHandler {
         } catch {
             print("->CoreData: \(error.localizedDescription)")
             return []
+        }
+    }
+    
+    func delete<T: NSManagedObject>(_ object: T) {
+        viewContext.delete(object)
+        save()
+    }
+}
+
+extension DatabaseHandler {
+    func searchPhoto(with id: String) -> Photo? {
+        let request = Photo.fetchRequest()
+
+        let predicate = NSPredicate(format: "id = %@", id)
+        request.predicate = predicate
+
+        do {
+            let photo = try self.viewContext.fetch(request)
+            return photo.first as? Photo
+        } catch {
+            print("->CoreData: \(error.localizedDescription)")
+            return nil
         }
     }
 }

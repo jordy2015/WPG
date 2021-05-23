@@ -39,7 +39,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Favorites" id="Rot-MX-ezh"/>
                     <connections>
-                        <segue destination="ZKX-Ce-cRL" kind="presentation" identifier="PhotoViewerSegue" modalPresentationStyle="automatic" modalTransitionStyle="flipHorizontal" id="NPt-PV-Zjm"/>
+                        <segue destination="ZKX-Ce-cRL" kind="show" identifier="PhotoViewerSegue" id="NPt-PV-Zjm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWO-8E-N8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -49,7 +49,9 @@
         <!--PhotoViewer-->
         <scene sceneID="zba-C9-K1P">
             <objects>
-                <viewControllerPlaceholder storyboardName="PhotoViewer" id="ZKX-Ce-cRL" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PhotoViewer" id="ZKX-Ce-cRL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gCQ-V9-vqh"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpu-EG-7em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1296" y="-459"/>
