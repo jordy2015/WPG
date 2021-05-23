@@ -18,6 +18,7 @@ class GalleryViewController: UIViewController {
     }
     
     fileprivate var indexSelected: Int?
+    fileprivate var page: Int = 1
 
     private let galleryColletionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -40,7 +41,7 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         presenter.attachView(self)
-        presenter.getPhotos(page: 1)
+        presenter.getPhotos(page: self.page)
     }
     
     deinit {
@@ -89,6 +90,15 @@ extension GalleryViewController: UICollectionViewDataSource {
         self.indexSelected = indexPath.row
         performSegue(withIdentifier: "PhotoViewerSegue", sender: nil)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let height = scrollView.frame.size.height
+        let contentYoffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+        if distanceFromBottom < height {
+            presenter.getPhotos(page: self.page)
+        }
+    }
 }
 
 extension GalleryViewController: UICollectionViewDelegateFlowLayout {
@@ -115,6 +125,7 @@ extension GalleryViewController: GalleryProtocol {
     }
     
     func gotPhotos(photoList: [PhotoProtocol]) {
+        self.page += 1
         self.photoList.append(contentsOf: photoList)
     }
 }
