@@ -12,15 +12,45 @@ struct UserModel: Decodable {
     let userName: String
     let name: String
     let profileImage: ProfileImageModel
-    let portfolioUrl: String
-    let totalPhotos: String
+    let portfolioUrl: String?
+    let totalPhotos: Int
     
     enum CodingKeys: String, CodingKey {
         case id
         case userName = "username"
         case name
-        case portfolioUrl = "portfolio_url"
         case profileImage = "profile_image"
+        case portfolioUrl = "portfolio_url"
         case totalPhotos = "total_photos"
+    }
+}
+
+extension UserModel: UserProtocol {
+    func getId() -> String {
+        return self.id
+    }
+    
+    func getUserName() -> String {
+        return self.userName
+    }
+    
+    func getProfileImageUrl() -> String {
+        return self.profileImage.medium
+    }
+    
+    func getPortfolioUrl() -> String {
+        return self.portfolioUrl ?? "None"
+    }
+    
+    func getTotalPhotos() -> Int {
+        return self.totalPhotos
+    }
+    
+    func getProfileImage() -> Data? {
+        return nil
+    }
+    
+    func isFavorite() -> Bool {
+        return false
     }
 }

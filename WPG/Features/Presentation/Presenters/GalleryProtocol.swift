@@ -10,5 +10,5 @@ import Foundation
 protocol GalleryProtocol: class {
     func shouldDisplayActivityIndicator(_ shouldDisplay: Bool)
     func gotError(_ error: Error)
-    func gotPhotos(photosList: [PhotoProtocol])
+    func gotPhotos(photoList: [PhotoProtocol])
 }

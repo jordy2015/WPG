@@ -30,7 +30,7 @@ class GalleryPresenter {
             if let e = error {
                 self.view?.gotError(e)
             } else {
-                self.view?.gotPhotos(photosList: photosList ?? [])
+                self.view?.gotPhotos(photoList: photosList ?? [])
             }
         }
     }

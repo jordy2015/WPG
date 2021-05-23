@@ -9,19 +9,25 @@ import UIKit
 
 class GalleryViewController: UIViewController {
     
-    let presenter = GalleryPresenter(repository: DI.factory.getGalleryRepository())
+    private let presenter = GalleryPresenter(repository: DI.factory.getGalleryRepository())
+    
+    fileprivate var photoList: [PhotoProtocol] = [] {
+        didSet {
+            self.galleryColletionView.reloadData()
+        }
+    }
 
-    let galleryColletionView: UICollectionView = {
+    private let galleryColletionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = UIColor.white
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "default")
+        collectionView.backgroundColor = UIColor.clear
+        collectionView.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
         return collectionView
     }()
     
-    let gallerySearchController: UISearchController = {
+    private let gallerySearchController: UISearchController = {
         let searchController = UISearchController()
         searchController.searchBar.autocapitalizationType = .none
         searchController.obscuresBackgroundDuringPresentation = false
@@ -39,7 +45,7 @@ class GalleryViewController: UIViewController {
         presenter.detachView()
     }
     
-    func setupUI() {
+    private func setupUI() {
         self.view.addSubview(self.galleryColletionView)
         navigationItem.searchController = gallerySearchController
         
@@ -65,23 +71,26 @@ class GalleryViewController: UIViewController {
 
 extension GalleryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return photoList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "default", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+        cell.setupUI(with: photoList[indexPath.row])
         return cell
     }
 }
 
 extension GalleryViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat.zero
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width / 2 - 15
-        return CGSize(width: width, height: width + 80)
+        let photo = self.photoList[indexPath.row]
+        let porcentage: Float = Float(photo.getHeight())/Float(photo.getWidth())/2
+        let height = porcentage > Float(0.8) ? collectionView.bounds.height * 0.8 : collectionView.bounds.height * CGFloat(porcentage)
+        return CGSize(width: collectionView.bounds.width, height: height)
     }
 }
 
@@ -95,8 +104,7 @@ extension GalleryViewController: GalleryProtocol {
         print(error)
     }
     
-    func gotPhotos(photosList: [PhotoProtocol]) {
-        print("-> got data!!!")
-        print(photosList)
+    func gotPhotos(photoList: [PhotoProtocol]) {
+        self.photoList.append(contentsOf: photoList)
     }
 }
