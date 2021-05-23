@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD16A493265A195A00870589 /* PhotoViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD16A492265A195A00870589 /* PhotoViewer.storyboard */; };
 		CD16A499265A1BB700870589 /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16A498265A1BB700870589 /* PhotoViewerViewController.swift */; };
+		CD16A4A8265A3C0300870589 /* UserDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16A4A7265A3C0300870589 /* UserDetailsTableViewController.swift */; };
 		CD958D0C265964EF00CF5D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0B265964EF00CF5D33 /* AppDelegate.swift */; };
 		CD958D0E265964EF00CF5D33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */; };
 		CD958D13265964EF00CF5D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D11265964EF00CF5D33 /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		86A78F2996B631308401F500 /* Pods-WPG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPG.release.xcconfig"; path = "Target Support Files/Pods-WPG/Pods-WPG.release.xcconfig"; sourceTree = "<group>"; };
 		CD16A492265A195A00870589 /* PhotoViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoViewer.storyboard; sourceTree = "<group>"; };
 		CD16A498265A1BB700870589 /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
+		CD16A4A7265A3C0300870589 /* UserDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewController.swift; sourceTree = "<group>"; };
 		CD958D08265964EF00CF5D33 /* WPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD958D0B265964EF00CF5D33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			path = PhotoViewer;
 			sourceTree = "<group>";
 		};
+		CD16A4A6265A3BD500870589 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CD16A4A7265A3C0300870589 /* UserDetailsTableViewController.swift */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
 		CD958CFF265964EF00CF5D33 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +224,7 @@
 		CD958D5526597AFB00CF5D33 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CD16A4A6265A3BD500870589 /* UserDetails */,
 				CD16A497265A1B7500870589 /* PhotoViewer */,
 				CD958E2A2659C0F100CF5D33 /* Xibs */,
 				CD958D5C26597C3600CF5D33 /* Presenters */,
@@ -588,6 +599,7 @@
 				CD958DD1265993E100CF5D33 /* PhotoModel.swift in Sources */,
 				CD16A499265A1BB700870589 /* PhotoViewerViewController.swift in Sources */,
 				CD958E172659A6FA00CF5D33 /* DI.swift in Sources */,
+				CD16A4A8265A3C0300870589 /* UserDetailsTableViewController.swift in Sources */,
 				CD958DD62659949000CF5D33 /* UrlModel.swift in Sources */,
 				CD958DEE265999C700CF5D33 /* PhotoProtocol.swift in Sources */,
 				CD958E0C2659A49400CF5D33 /* GalleryPresenter.swift in Sources */,

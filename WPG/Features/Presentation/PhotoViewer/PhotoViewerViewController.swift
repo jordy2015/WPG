@@ -10,11 +10,23 @@ import UIKit
 class PhotoViewerViewController: UIViewController {
     
     var photo: PhotoProtocol?
+    var imagePreLoaded: UIImage?
+    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var viewer: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
-
+    
+    func setupUI() {
+        guard let image = imagePreLoaded else { return }
+        viewer.image = image
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let user = self.photo?.getUser() {
+            (segue.destination as? UserDetailsTableViewController)?.user = user
+        }
+    }
 }

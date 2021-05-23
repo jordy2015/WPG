@@ -17,7 +17,7 @@ class GalleryViewController: UIViewController {
         }
     }
     
-    fileprivate var photoSelected: PhotoProtocol?
+    fileprivate var indexSelected: Int?
 
     private let galleryColletionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -61,9 +61,15 @@ class GalleryViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let photo = self.photoSelected {
+        if let index = self.indexSelected {
+            let photo = self.photoList[index]
             (segue.destination as? PhotoViewerViewController)?.photo = photo
-            self.photoSelected = nil
+            
+            let indexPath = IndexPath(row: index, section: 0)
+            let cell = self.galleryColletionView.cellForItem(at: indexPath) as! PhotoCell
+            (segue.destination as? PhotoViewerViewController)?.imagePreLoaded = cell.photoImage.image
+            
+            self.indexSelected = nil
         }
     }
 }
@@ -80,8 +86,7 @@ extension GalleryViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let photo = photoList[indexPath.row]
-        self.photoSelected = photo
+        self.indexSelected = indexPath.row
         performSegue(withIdentifier: "PhotoViewerSegue", sender: nil)
     }
 }
