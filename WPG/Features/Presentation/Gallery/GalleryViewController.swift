@@ -18,6 +18,7 @@ class GalleryViewController: UIViewController {
     }
     
     fileprivate var indexSelected: Int?
+    fileprivate var page: Int = 1
 
     private let galleryColletionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -30,7 +31,10 @@ class GalleryViewController: UIViewController {
     }()
     
     private let gallerySearchController: UISearchController = {
-        let searchController = UISearchController()
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let searchController = UISearchController(searchResultsController: SearchViewController(collectionViewLayout: layout))
+        
         searchController.searchBar.autocapitalizationType = .none
         searchController.obscuresBackgroundDuringPresentation = false
         return searchController
@@ -40,7 +44,7 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         presenter.attachView(self)
-        presenter.getPhotos(page: 1)
+        presenter.getPhotos(page: self.page)
     }
     
     deinit {
@@ -58,6 +62,7 @@ class GalleryViewController: UIViewController {
         
         self.galleryColletionView.delegate = self
         self.galleryColletionView.dataSource = self
+        self.gallerySearchController.searchResultsUpdater = self
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -89,6 +94,15 @@ extension GalleryViewController: UICollectionViewDataSource {
         self.indexSelected = indexPath.row
         performSegue(withIdentifier: "PhotoViewerSegue", sender: nil)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let height = scrollView.frame.size.height
+        let contentYoffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+        if distanceFromBottom < height {
+            presenter.getPhotos(page: self.page)
+        }
+    }
 }
 
 extension GalleryViewController: UICollectionViewDelegateFlowLayout {
@@ -104,6 +118,21 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension GalleryViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchResults = self.photoList
+        
+        // Strip out all the leading and trailing spaces.
+        let strippedString = searchController.searchBar.text!.trimmingCharacters(in: CharacterSet.whitespaces)
+        
+        let filteredResults = searchResults.filter { $0.getUser().getUserName().contains(strippedString) || $0.getUser().getName().contains(strippedString)}
+        
+        if let searchViewController = searchController.searchResultsController as? SearchViewController {
+            searchViewController.photoList = filteredResults
+        }
+    }
+}
+
 extension GalleryViewController: GalleryProtocol {
     func shouldDisplayActivityIndicator(_ shouldDisplay: Bool) {
         print(shouldDisplay)
@@ -115,6 +144,7 @@ extension GalleryViewController: GalleryProtocol {
     }
     
     func gotPhotos(photoList: [PhotoProtocol]) {
+        self.page += 1
         self.photoList.append(contentsOf: photoList)
     }
 }

@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="404" height="390"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Tjl-2P-cbP">
-                        <rect key="frame" x="0.0" y="230" width="404" height="160"/>
+                        <rect key="frame" x="0.0" y="230" width="404" height="165"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s59-Gv-YQa">
                         <rect key="frame" x="10" y="280" width="384" height="100"/>
@@ -79,7 +79,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="s59-Gv-YQa" secondAttribute="trailing" constant="10" id="23d-BI-wO8"/>
-                <constraint firstAttribute="bottom" secondItem="Tjl-2P-cbP" secondAttribute="bottom" id="3So-fJ-fmd"/>
+                <constraint firstAttribute="bottom" secondItem="Tjl-2P-cbP" secondAttribute="bottom" constant="-5" id="3So-fJ-fmd"/>
                 <constraint firstItem="4Oa-Hj-KZJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="76E-HS-OQQ"/>
                 <constraint firstItem="4Oa-Hj-KZJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="B4P-WY-b6P"/>
                 <constraint firstItem="Tjl-2P-cbP" firstAttribute="top" secondItem="s59-Gv-YQa" secondAttribute="top" constant="-50" id="S7J-dO-h5A"/>
