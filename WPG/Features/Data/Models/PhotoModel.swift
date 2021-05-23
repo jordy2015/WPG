@@ -41,6 +41,7 @@ extension PhotoModel: PhotoProtocol {
         userEntity.shouldReloadImage = true
         userEntity.totalPhotos = Int32(getUser().getTotalPhotos())
         userEntity.userName = getUser().getUserName()
+        userEntity.name = getUser().getName()
         
         photoEntity.height = Int32(getHeight())
         photoEntity.id = getId()

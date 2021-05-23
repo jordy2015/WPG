@@ -76,7 +76,7 @@ class FavoritesViewController: UIViewController {
             let indexPath = IndexPath(row: index, section: 0)
             let cell = self.favoritesColletionView.cellForItem(at: indexPath) as! PhotoCell
             (segue.destination as? PhotoViewerViewController)?.imagePreLoaded = cell.photoImage.image
-            
+            segue.destination.presentationController?.delegate = self;
             self.indexSelected = nil
         }
     }
@@ -123,6 +123,12 @@ extension FavoritesViewController: UISearchResultsUpdating {
         if let searchViewController = searchController.searchResultsController as? SearchViewController {
             searchViewController.photoList = filteredResults
         }
+    }
+}
+
+extension FavoritesViewController: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerWillDismiss(_ presentationController: UIPresentationController) {
+        presenter.getFavorites()
     }
 }
 

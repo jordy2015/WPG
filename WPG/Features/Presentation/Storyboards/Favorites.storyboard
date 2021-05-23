@@ -39,7 +39,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Favorites" id="Rot-MX-ezh"/>
                     <connections>
-                        <segue destination="ZKX-Ce-cRL" kind="show" identifier="PhotoViewerSegue" id="NPt-PV-Zjm"/>
+                        <segue destination="ZKX-Ce-cRL" kind="presentation" identifier="PhotoViewerSegue" modalPresentationStyle="automatic" modalTransitionStyle="flipHorizontal" id="NPt-PV-Zjm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWO-8E-N8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
