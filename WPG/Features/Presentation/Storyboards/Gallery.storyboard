@@ -38,10 +38,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Gallery" id="zCQ-t0-K8C"/>
+                    <connections>
+                        <segue destination="Rci-pj-Gow" kind="show" identifier="PhotoViewerSegue" id="hCU-32-M9h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhW-PX-GNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="687" y="-230"/>
+        </scene>
+        <!--PhotoViewer-->
+        <scene sceneID="br0-5c-HTC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotoViewer" id="Rci-pj-Gow" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BOV-ga-xLh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1V-CJ-8TL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327" y="-230"/>
         </scene>
     </scenes>
     <resources>

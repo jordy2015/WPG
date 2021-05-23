@@ -16,6 +16,8 @@ class GalleryViewController: UIViewController {
             self.galleryColletionView.reloadData()
         }
     }
+    
+    fileprivate var photoSelected: PhotoProtocol?
 
     private let galleryColletionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -58,15 +60,12 @@ class GalleryViewController: UIViewController {
         self.galleryColletionView.dataSource = self
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let photo = self.photoSelected {
+            (segue.destination as? PhotoViewerViewController)?.photo = photo
+            self.photoSelected = nil
+        }
     }
-    */
 }
 
 extension GalleryViewController: UICollectionViewDataSource {
@@ -78,6 +77,12 @@ extension GalleryViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         cell.setupUI(with: photoList[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photo = photoList[indexPath.row]
+        self.photoSelected = photo
+        performSegue(withIdentifier: "PhotoViewerSegue", sender: nil)
     }
 }
 
