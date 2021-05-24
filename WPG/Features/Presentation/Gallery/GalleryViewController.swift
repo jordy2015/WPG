@@ -41,6 +41,14 @@ class GalleryViewController: UIViewController {
         return searchController
     }()
     
+    private let loader: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .large
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return activityIndicator
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -61,12 +69,16 @@ class GalleryViewController: UIViewController {
     
     private func setupUI() {
         self.view.addSubview(self.galleryColletionView)
+        self.view.addSubview(self.loader)
         navigationItem.searchController = gallerySearchController
         
         self.galleryColletionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         self.galleryColletionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         self.galleryColletionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         self.galleryColletionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        self.loader.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        self.loader.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         
         self.galleryColletionView.delegate = self
         self.galleryColletionView.dataSource = self
@@ -84,6 +96,13 @@ class GalleryViewController: UIViewController {
             
             self.indexSelected = nil
         }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
 }
 
@@ -146,12 +165,11 @@ extension GalleryViewController: GalleryProtocol {
     }
     
     func shouldDisplayActivityIndicator(_ shouldDisplay: Bool) {
-        print(shouldDisplay)
+        shouldDisplay ? self.loader.startAnimating() : self.loader.stopAnimating()
     }
     
     func gotError(_ error: Error) {
-        print("-> got ErrorXXXX")
-        print(error)
+        self.showAlert(title: "Error!", message: error.localizedDescription)
     }
     
     func gotPhotos(photoList: [PhotoProtocol]) {

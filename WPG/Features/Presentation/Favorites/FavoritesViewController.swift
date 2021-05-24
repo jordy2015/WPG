@@ -81,6 +81,13 @@ class FavoritesViewController: UIViewController {
             self.indexSelected = nil
         }
     }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
 }
 
 extension FavoritesViewController: UICollectionViewDataSource {
@@ -143,11 +150,13 @@ extension FavoritesViewController: FavoritesProtocol {
     }
     
     func gotError(_ error: Error) {
-        print("-> got ErrorXXXX")
-        print(error)
+        self.showAlert(title: "Error!", message: error.localizedDescription)
     }
     
     func gotPhotos(photoList: [PhotoProtocol]) {
+        if photoList.isEmpty {
+            self.showAlert(title: "Favorites", message: "You don't have favorites yet")
+        }
         self.photoList = photoList
     }
 }

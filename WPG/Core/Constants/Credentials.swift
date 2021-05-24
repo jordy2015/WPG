@@ -8,6 +8,6 @@
 import Foundation
 
 class Credentials {
-    static let accessKey = "aOARZAylGdoxhO-QSpxPt4GKYrOoyMT3P9sn0u-1WOc"
-    static let secretKey = "QZugAZxRYTVVD4-eQbAWIdGZ_ut7JNHSb4ec2IWOtkM"
+    static let accessKey = ""
+    static let secretKey = ""
 }

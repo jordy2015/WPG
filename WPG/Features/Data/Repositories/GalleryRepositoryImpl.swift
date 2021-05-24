@@ -23,7 +23,7 @@ class GalleryRepositoryImpl: GalleryRepository {
         if httpConnection.hasConnection() {
             remoteDataSource.getPhotos(inPage: inPage) { (photosList, error) in
                 guard let photos = photosList else {
-                    completitionHandler(nil, nil, false)
+                    completitionHandler(nil, error, false)
                     return
                 }
                 completitionHandler(photos, nil, false)
