@@ -8,22 +8,34 @@
 import Foundation
 
 class ImagesCache {
-    static private var photos: [String : Data] = [:]
-    static private var profileImages: [String : Data] = [:]
     
-    static func set(key: String, photo: Data) {
-        photos[key] = photo
+    static let `default` = ImagesCache()
+    let maxPhotosCache: Int = 100
+    let maxProfileImagesCache: Int = 300
+    private var photos: [String : Data] = [:]
+    private var profileImages: [String : Data] = [:]
+    
+    func set(key: String, photo: Data?) {
+        guard let data = photo else { return }
+        if photos.count >= maxPhotosCache {
+            photos.removeAll()
+        }
+        photos[key] = data
     }
     
-    static func set(key: String, profileImage: Data) {
-        profileImages[key] = profileImage
+    func set(key: String, profileImage: Data?) {
+        guard let data = profileImage else { return }
+        if profileImages.count >= maxProfileImagesCache {
+            profileImages.removeAll()
+        }
+        profileImages[key] = data
     }
     
-    static func getPhoto(key: String) -> Data? {
+    func getPhoto(key: String) -> Data? {
         return photos[key]
     }
     
-    static func getprofileImage(key: String) -> Data? {
+    func getprofileImage(key: String) -> Data? {
         return profileImages[key]
     }
 }

@@ -30,6 +30,31 @@ struct PhotoModel: Decodable {
 }
 
 extension PhotoModel: PhotoProtocol {
+    func save(in database: DatabaseHandler, cache imageCache: ImagesCache) {
+        guard let userEntity = database.add(User.self) else { return }
+        guard let photoEntity = database.add(Photo.self) else { return }
+        
+        userEntity.id = getUser().getId()
+        userEntity.portfolioUrl = getUser().getPortfolioUrl()
+        userEntity.profileImage = imageCache.getprofileImage(key: getUser().getId())
+        userEntity.profileImageUrl = getUser().getProfileImageUrl()
+        userEntity.shouldReloadImage = true
+        userEntity.totalPhotos = Int32(getUser().getTotalPhotos())
+        userEntity.userName = getUser().getUserName()
+        userEntity.name = getUser().getName()
+        
+        photoEntity.height = Int32(getHeight())
+        photoEntity.id = getId()
+        photoEntity.image = imageCache.getPhoto(key: getId())
+        photoEntity.imageUrl = getImageUrl()
+        photoEntity.likes = Int32(getLikes())
+        photoEntity.width = Int32(getWidth())
+        photoEntity.shouldReloadImage = true
+        photoEntity.user = userEntity
+        
+        database.save()
+    }
+    
     func getId() -> String {
         return self.id
     }
@@ -58,7 +83,7 @@ extension PhotoModel: PhotoProtocol {
         return self.user
     }
     
-    func isFavorite() -> Bool {
-        return false
+    func isFavorite(search database: DatabaseHandler) -> Bool {
+        return database.searchPhoto(with: self.getId()) != nil ? true : false
     }
 }

@@ -59,6 +59,9 @@
                                             <constraint firstAttribute="height" constant="50" id="nLa-2o-kQh"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="star" catalog="system"/>
+                                        <connections>
+                                            <action selector="addToFavorites:" destination="LGk-Du-tew" eventType="touchUpInside" id="YcX-lX-5FR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="container" destination="mNr-e1-ydz" id="qsy-lV-8hj"/>
+                        <outlet property="favoriteBtn" destination="KRh-hg-tyb" id="DuS-oh-Um7"/>
                         <outlet property="viewer" destination="d80-In-EAJ" id="Reb-aY-qxX"/>
                     </connections>
                 </viewController>

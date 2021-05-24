@@ -20,8 +20,8 @@ class SearchViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView.backgroundColor = UIColor.clear
+        collectionView.bounces = false
+        collectionView.backgroundColor = UIColor.black
         collectionView.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
     }
 
@@ -43,7 +43,6 @@ class SearchViewController: UICollectionViewController {
         let cell = self.collectionView.cellForItem(at: indexPath) as! PhotoCell
         photoVC.imagePreLoaded = cell.photoImage.image
         photoVC.photo = photo
-        
         self.present(photoVC, animated: true, completion: nil)
     }
 }

@@ -1,22 +1,22 @@
 //
-//  GalleryPresenter.swift
+//  FavoritesPresenter.swift
 //  WPG
 //
-//  Created by Jordy Gonzalez on 22/05/21.
+//  Created by Jordy Gonzalez on 23/05/21.
 //
 
 import Foundation
 
-class GalleryPresenter {
-    private let useCase: GetPhotos
-    private weak var view: GalleryProtocol?
+class FavoritesPresenter {
+    private let useCase: GetFavorites
+    private weak var view: FavoritesProtocol?
     private var gettingData: Bool = false
     
-    init(useCase: GetPhotos) {
+    init(useCase: GetFavorites) {
         self.useCase = useCase
     }
     
-    func attachView(_ view: GalleryProtocol) {
+    func attachView(_ view: FavoritesProtocol) {
         self.view = view
     }
     
@@ -24,13 +24,12 @@ class GalleryPresenter {
         self.view = nil
     }
     
-    func getPhotos(page: Int) {
+    func getFavorites() {
         guard !gettingData else { return }
         gettingData = true
         self.view?.shouldDisplayActivityIndicator(true)
-        useCase.call(inPage: page) { [unowned self] (photosList, error, isLocal) in
+        useCase.call() { [unowned self] (photosList, error) in
             self.view?.shouldDisplayActivityIndicator(false)
-            self.view?.isLocal(isLocal)
             if let e = error {
                 self.view?.gotError(e)
             } else {
