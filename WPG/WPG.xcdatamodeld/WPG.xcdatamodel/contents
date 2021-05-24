@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Photo" representedClassName=".Photo" syncable="YES">
+        <attribute name="height" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="imageUrl" attributeType="String"/>
+        <attribute name="likes" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shouldReloadImage" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="width" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="user" maxCount="1" deletionRule="Cascade" destinationEntity="User"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="portfolioUrl" attributeType="String"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary"/>
+        <attribute name="profileImageUrl" attributeType="String"/>
+        <attribute name="shouldReloadImage" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="totalPhotos" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="userName" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Photo" positionX="-377.9987182617188" positionY="-156.9884185791016" width="128" height="163"/>
+        <element name="User" positionX="-191.1864624023438" positionY="-171.6436157226562" width="128" height="163"/>
+    </elements>
 </model>
