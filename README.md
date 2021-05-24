@@ -2,7 +2,7 @@
 
 WPG is a great app to see photos taken by photographer around the world, the app consumes services from [unsplash](https://unsplash.com/developers).
 
-<img align="center" src="https://github.com/jordy2015/IMDB_Android/blob/master/assets/home.png" height=300><img align="center" src="https://github.com/jordy2015/IMDB_Android/blob/master/assets/detail.png" height=300><img align="center" src="https://github.com/jordy2015/IMDB_Android/blob/master/assets/home.png" height=300><img align="center" src="https://github.com/jordy2015/IMDB_Android/blob/master/assets/detail.png" height=300>
+<img align="center" src="https://github.com/jordy2015/WPG/blob/develop/images/gallery.png" height=400><img align="center" src="https://github.com/jordy2015/WPG/blob/develop/images/favorites.png" height=400><img align="center" src="https://github.com/jordy2015/WPG/blob/develop/images/profile.png" height=400><img align="center" src="https://github.com/jordy2015/WPG/blob/develop/images/viewer.png" height=400>
 
 
 ### Installation
