@@ -21,8 +21,10 @@ class PhotoViewerViewController: UIViewController {
     }
     
     func setupUI() {
-        guard let image = imagePreLoaded else { return }
-        viewer.image = image
+        if let image = imagePreLoaded {
+            viewer.image = image
+        }
+        
         if let p = photo, p.isFavorite(search: DI.factory.getDatabaseHandler()) {
             favoriteBtn.setBackgroundImage(UIImage(systemName: "star.fill"), for: .normal)
         } else {

@@ -66,6 +66,7 @@ class FavoritesViewController: UIViewController {
         self.favoritesColletionView.delegate = self
         self.favoritesColletionView.dataSource = self
         self.favoritesSearchController.searchResultsUpdater = self
+        self.favoritesSearchController.delegate = self
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -112,9 +113,9 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension FavoritesViewController: UISearchResultsUpdating {
+extension FavoritesViewController: UISearchResultsUpdating, UISearchControllerDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        let searchResults = self.photoList
+        let searchResults = self.photoList.compactMap({!$0.getId().isEmpty ? $0 : nil})
         
         let strippedString = searchController.searchBar.text!.trimmingCharacters(in: CharacterSet.whitespaces)
         
@@ -123,6 +124,10 @@ extension FavoritesViewController: UISearchResultsUpdating {
         if let searchViewController = searchController.searchResultsController as? SearchViewController {
             searchViewController.photoList = filteredResults
         }
+    }
+    
+    func willDismissSearchController(_ searchController: UISearchController) {
+        self.photoList = self.photoList.compactMap({!$0.getId().isEmpty ? $0 : nil})
     }
 }
 

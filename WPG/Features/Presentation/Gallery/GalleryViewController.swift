@@ -19,7 +19,7 @@ class GalleryViewController: UIViewController {
     
     fileprivate var indexSelected: Int?
     fileprivate var page: Int = 1
-    fileprivate var shouldStopPagination: Bool = false
+    fileprivate var isLocalMode: Bool = false
 
     private let galleryColletionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -46,6 +46,13 @@ class GalleryViewController: UIViewController {
         setupUI()
         presenter.attachView(self)
         presenter.getPhotos(page: self.page)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isLocalMode {
+            presenter.getPhotos(page: self.page)
+        }
     }
     
     deinit {
@@ -100,7 +107,7 @@ extension GalleryViewController: UICollectionViewDataSource {
         let height = scrollView.frame.size.height
         let contentYoffset = scrollView.contentOffset.y
         let distanceFromBottom = scrollView.contentSize.height - contentYoffset
-        if distanceFromBottom < height && !shouldStopPagination {
+        if distanceFromBottom < height && !isLocalMode {
             presenter.getPhotos(page: self.page)
         }
     }
@@ -123,7 +130,6 @@ extension GalleryViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchResults = self.photoList
         
-        // Strip out all the leading and trailing spaces.
         let strippedString = searchController.searchBar.text!.trimmingCharacters(in: CharacterSet.whitespaces)
         
         let filteredResults = searchResults.filter { $0.getUser().getUserName().contains(strippedString) || $0.getUser().getName().contains(strippedString)}
@@ -136,7 +142,7 @@ extension GalleryViewController: UISearchResultsUpdating {
 
 extension GalleryViewController: GalleryProtocol {
     func isLocal(_ flag: Bool) {
-        self.shouldStopPagination = flag
+        self.isLocalMode = flag
     }
     
     func shouldDisplayActivityIndicator(_ shouldDisplay: Bool) {
@@ -149,7 +155,11 @@ extension GalleryViewController: GalleryProtocol {
     }
     
     func gotPhotos(photoList: [PhotoProtocol]) {
-        self.page += 1
-        self.photoList.append(contentsOf: photoList)
+        if isLocalMode {
+            self.photoList = photoList
+        } else {
+            self.page += 1
+            self.photoList.append(contentsOf: photoList)
+        }
     }
 }

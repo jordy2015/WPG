@@ -43,7 +43,6 @@ class SearchViewController: UICollectionViewController {
         let cell = self.collectionView.cellForItem(at: indexPath) as! PhotoCell
         photoVC.imagePreLoaded = cell.photoImage.image
         photoVC.photo = photo
-        
         self.present(photoVC, animated: true, completion: nil)
     }
 }
