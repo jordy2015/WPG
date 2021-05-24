@@ -18,7 +18,6 @@ class PhotoCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     func setupUI(with photo: PhotoProtocol) {
@@ -40,20 +39,28 @@ class PhotoCell: UICollectionViewCell {
             }
         } else {
             if let photoUrl = URL(string: photo.getImageUrl()) {
-                photoImage.af.setImage(withURL: photoUrl, cacheKey: photo.getId(), placeholderImage: UIImage(named: "placeholder"))
-                photoImage.af.setImage(withURL: photoUrl, placeholderImage: UIImage(named: "placeholder"))
+                if let image = ImagesCache.default.getPhoto(key: photo.getId())?.getImage {
+                    photoImage.image = image
+                } else {
+                    photoImage.af.setImage(withURL: photoUrl, cacheKey: photo.getId(), placeholderImage: UIImage(named: "placeholder"), completion:  { (image) in
+                        ImagesCache.default.set(key: photo.getId(), photo: image.data)
+                    })
+                }
             } else {
                 photoImage.image = UIImage(named: "placeholder")
             }
             
             if let userImageUrl = URL(string: user.getProfileImageUrl()) {
-                profileImage.af.setImage(withURL: userImageUrl, cacheKey: user.getId(), placeholderImage: UIImage(named: "placeholder"))
+                if let image = ImagesCache.default.getprofileImage(key: user.getId())?.getImage {
+                    profileImage.image = image
+                } else {
+                    profileImage.af.setImage(withURL: userImageUrl, cacheKey: user.getId(), placeholderImage: UIImage(named: "placeholder"), completion:  { (image) in
+                        ImagesCache.default.set(key: user.getId(), profileImage: image.data)
+                    })
+                }
             } else {
                 profileImage.image = UIImage(named: "placeholder")
             }
         }
     }
-    
-    
-
 }

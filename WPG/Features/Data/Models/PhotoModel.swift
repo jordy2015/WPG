@@ -30,13 +30,13 @@ struct PhotoModel: Decodable {
 }
 
 extension PhotoModel: PhotoProtocol {
-    func save(in database: DatabaseHandler) {
+    func save(in database: DatabaseHandler, cache imageCache: ImagesCache) {
         guard let userEntity = database.add(User.self) else { return }
         guard let photoEntity = database.add(Photo.self) else { return }
         
         userEntity.id = getUser().getId()
         userEntity.portfolioUrl = getUser().getPortfolioUrl()
-        userEntity.profileImage = nil
+        userEntity.profileImage = imageCache.getprofileImage(key: getUser().getId())
         userEntity.profileImageUrl = getUser().getProfileImageUrl()
         userEntity.shouldReloadImage = true
         userEntity.totalPhotos = Int32(getUser().getTotalPhotos())
@@ -45,7 +45,7 @@ extension PhotoModel: PhotoProtocol {
         
         photoEntity.height = Int32(getHeight())
         photoEntity.id = getId()
-        photoEntity.image = nil
+        photoEntity.image = imageCache.getPhoto(key: getId())
         photoEntity.imageUrl = getImageUrl()
         photoEntity.likes = Int32(getLikes())
         photoEntity.width = Int32(getWidth())

@@ -52,7 +52,5 @@ extension Photo: PhotoProtocol {
         return true
     }
     
-    func save(in database: DatabaseHandler) {
-        
-    }
+    func save(in database: DatabaseHandler, cache imageCache: ImagesCache) {}
 }

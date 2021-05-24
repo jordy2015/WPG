@@ -49,7 +49,7 @@ class PhotoViewerViewController: UIViewController {
             }
         } else {
             favoriteBtn.setBackgroundImage(UIImage(systemName: "star.fill"), for: .normal)
-            photo?.save(in: DI.factory.getDatabaseHandler())
+            photo?.save(in: DI.factory.getDatabaseHandler(), cache: DI.factory.getImageCache())
         }
     }
     

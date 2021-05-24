@@ -33,4 +33,8 @@ class DI {
     func getDatabaseHandler() -> DatabaseHandler {
         return DatabaseHandler()
     }
+    
+    func getImageCache() -> ImagesCache {
+        return ImagesCache.default
+    }
 }
