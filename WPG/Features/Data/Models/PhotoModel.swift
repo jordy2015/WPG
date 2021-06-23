@@ -72,7 +72,7 @@ extension PhotoModel: PhotoProtocol {
     }
     
     func getImageUrl() -> String {
-        return self.urls.full
+        return self.urls.regular
     }
     
     func getImage() -> Data? {

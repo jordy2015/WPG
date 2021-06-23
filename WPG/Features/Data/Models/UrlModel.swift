@@ -9,4 +9,5 @@ import Foundation
 
 struct UrlModel: Decodable {
     let full: String
+    let regular: String
 }
