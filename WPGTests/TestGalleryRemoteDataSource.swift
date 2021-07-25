@@ -41,7 +41,7 @@ class ApiClientErrorMock: NetworkProtocol {
     }
 }
 
-class GalleryRemoteDataSource: XCTestCase {
+class TestGalleryRemoteDataSource: XCTestCase {
     var galleryRemoteDatasource: GalleryRemoteDataSourceImpl?
 
     func testGetDataCorrectly() {

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FavoritesLocalDataSource {
-    func getPhotos(completitionHandler: @escaping(_ response: [Photo]?, _ error: Error?) -> Void)
+    func getPhotos(completitionHandler: @escaping(_ response: [PhotoProtocol]?, _ error: Error?) -> Void)
 }
 
 class FavoritesLocalDataSourceImpl: FavoritesLocalDataSource {
@@ -19,9 +19,9 @@ class FavoritesLocalDataSourceImpl: FavoritesLocalDataSource {
         self.database = database
     }
     
-    func getPhotos(completitionHandler: @escaping ([Photo]?, Error?) -> Void) {
+    func getPhotos(completitionHandler: @escaping ([PhotoProtocol]?, Error?) -> Void) {
         let photos = database.fetch(Photo.self)
-        completitionHandler(photos, nil)
+        completitionHandler(photos as [PhotoProtocol], nil)
     }
 }
 
