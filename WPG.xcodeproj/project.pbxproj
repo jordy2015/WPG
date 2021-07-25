@@ -21,6 +21,7 @@
 		CD60C812265AEB4A003E5D2B /* FavoritesLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60C811265AEB4A003E5D2B /* FavoritesLocalDataSource.swift */; };
 		CD83A99326AC9D590043E87F /* TestGalleryRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83A99226AC9D590043E87F /* TestGalleryRemoteDataSource.swift */; };
 		CD83A99826ACFBA00043E87F /* TestGalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83A99726ACFBA00043E87F /* TestGalleryRepository.swift */; };
+		CD83A9A326AD34840043E87F /* TestGetPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD83A9A226AD34840043E87F /* TestGetPhotos.swift */; };
 		CD958D0C265964EF00CF5D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0B265964EF00CF5D33 /* AppDelegate.swift */; };
 		CD958D0E265964EF00CF5D33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */; };
 		CD958D13265964EF00CF5D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD958D11265964EF00CF5D33 /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		CD60C811265AEB4A003E5D2B /* FavoritesLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesLocalDataSource.swift; sourceTree = "<group>"; };
 		CD83A99226AC9D590043E87F /* TestGalleryRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGalleryRemoteDataSource.swift; sourceTree = "<group>"; };
 		CD83A99726ACFBA00043E87F /* TestGalleryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGalleryRepository.swift; sourceTree = "<group>"; };
+		CD83A9A226AD34840043E87F /* TestGetPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGetPhotos.swift; sourceTree = "<group>"; };
 		CD958D08265964EF00CF5D33 /* WPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD958D0B265964EF00CF5D33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD958D0D265964EF00CF5D33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				CD958D27265964F200CF5D33 /* Info.plist */,
 				CD83A99226AC9D590043E87F /* TestGalleryRemoteDataSource.swift */,
 				CD83A99726ACFBA00043E87F /* TestGalleryRepository.swift */,
+				CD83A9A226AD34840043E87F /* TestGetPhotos.swift */,
 			);
 			path = WPGTests;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				CD958D26265964F200CF5D33 /* WPGTests.swift in Sources */,
 				CD83A99826ACFBA00043E87F /* TestGalleryRepository.swift in Sources */,
 				CD83A99326AC9D590043E87F /* TestGalleryRemoteDataSource.swift in Sources */,
+				CD83A9A326AD34840043E87F /* TestGetPhotos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
