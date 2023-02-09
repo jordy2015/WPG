@@ -9,7 +9,16 @@ import Foundation
 import CodableAlamofire
 import Alamofire
 
-class ApiClient {
+protocol NetworkProtocol {
+    func performRequest<T: Decodable>(to url: String,
+                        httpMethod: HttpMethod,
+                        keyPath: String?,
+                        body: [String: AnyObject]?,
+                        completitionHandler: @escaping(_ response: T?, _ error: Error?) -> Void)
+    func hasConnection() -> Bool
+}
+
+class ApiClient: NetworkProtocol {
     static let `default` = ApiClient()
     
     func performRequest<T: Decodable>(to url: String,

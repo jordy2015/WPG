@@ -13,9 +13,9 @@ protocol GalleryRemoteDataSource {
 
 class GalleryRemoteDataSourceImpl: GalleryRemoteDataSource {
     
-    let httpClient: ApiClient
+    let httpClient: NetworkProtocol
     
-    init(apiClient: ApiClient) {
+    init(apiClient: NetworkProtocol) {
         self.httpClient = apiClient
     }
     
@@ -29,6 +29,6 @@ class GalleryRemoteDataSourceImpl: GalleryRemoteDataSource {
         params.forEach { (key, value) in
             url = url.replacingOccurrences(of: key, with: value)
         }
-        httpClient.performRequest(to: url, httpMethod: .Get, completitionHandler: completitionHandler)
+        httpClient.performRequest(to: url, httpMethod: .Get, keyPath: nil, body: nil, completitionHandler: completitionHandler)
     }
 }
