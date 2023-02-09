@@ -27,7 +27,7 @@ WPG is a great app to see photos taken by photographer around the world, the app
 
 ### ToDo
 
-- [ ] Unit test
+- [ ] Test 100%
 
 ## Tools
 
@@ -45,4 +45,4 @@ WPG is a great app to see photos taken by photographer around the world, the app
 - [x] Clean architecture
 - [x] Dependency Injection
 - [x] Solid
-- [ ] Unit test
+- [x] Unit test
