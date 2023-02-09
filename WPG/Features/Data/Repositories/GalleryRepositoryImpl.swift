@@ -9,11 +9,11 @@ import Foundation
 
 class GalleryRepositoryImpl: GalleryRepository {
     
-    let httpConnection: ApiClient
+    let httpConnection: NetworkProtocol
     let remoteDataSource: GalleryRemoteDataSource
     let localDataSource: FavoritesLocalDataSource
     
-    init(httpConnection: ApiClient, remote: GalleryRemoteDataSource, local: FavoritesLocalDataSource) {
+    init(httpConnection: NetworkProtocol, remote: GalleryRemoteDataSource, local: FavoritesLocalDataSource) {
         self.httpConnection = httpConnection
         self.remoteDataSource = remote
         self.localDataSource = local
